@@ -15,7 +15,7 @@ public static class ProductExtension
         var index = AskNumber();
         var selectedProduct = selectedProducts[index-1];
         products.Add(selectedProduct);
-        selectedProduct.DisplayInfo();
+        //selectedProduct.DisplayInfo();
 
     }
     static int AskNumber() // метода для запросов числовых значений, если не число, то выдаем ошибку

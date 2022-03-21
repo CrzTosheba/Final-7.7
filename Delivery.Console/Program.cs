@@ -11,6 +11,5 @@ var books = GlobalRepository.BookRepository.GetData();
 var foods = GlobalRepository.FoodRepository.GetData();
 products.AddProduct(books, message: "Выберите книгу");
 products.AddProduct(foods, message: "Выберите хавку");
-
 Console.WriteLine("Выберите способ доставки");
 
