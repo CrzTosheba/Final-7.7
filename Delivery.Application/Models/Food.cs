@@ -3,6 +3,13 @@ namespace Delivery.Application.Models;
 public class Food : Product
 {
     private double weight;
+
+    public Food(string name, double weight)
+    {
+        Name = name;
+        this.weight = weight;
+    }
+
     public double Weight
     {
         get => weight;
@@ -18,5 +25,12 @@ public class Food : Product
     public override void DisplayInfo()
     {
         Console.WriteLine($"{Name} {Weight}");
+    }
+
+}
+public class GoodFood : Food
+{
+    public GoodFood(string name, double Weight) : base(name, Weight)
+    {
     }
 }

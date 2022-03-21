@@ -20,7 +20,7 @@ public class Book : Product
         return book1.Name == book2.Name && book1.Author == book2.Author;
     }
 
-    public static bool operator != (Book book1, Book book2)
+    public static bool operator !=(Book book1, Book book2)
     {
         return !(book1 == book2);
     }
