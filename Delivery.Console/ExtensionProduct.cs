@@ -1,5 +1,7 @@
 ﻿
 using Delivery.Application.Models;
+using Delivery.Helpers;
+
 namespace Delivery.Application;
 public static class ProductExtension
 {
@@ -12,26 +14,10 @@ public static class ProductExtension
             Console.WriteLine($"№{i}");
             selectedProducts[i - 1].DisplayInfo();
         }
-        var index = AskNumber();
+        var index = IOHelper.AskNumber(max: selectedProducts.Count() + 1); 
         var selectedProduct = selectedProducts[index-1];
         products.Add(selectedProduct);
         //selectedProduct.DisplayInfo();
-
-    }
-    static int AskNumber() // метода для запросов числовых значений, если не число, то выдаем ошибку
-    {
-        while (true)
-        {
-            var response = Console.ReadLine();
-            if (int.TryParse(response, out var number) && number > 0) // парсим то что ввели и проверяемс
-            {
-                return number;
-            }
-            Console.WriteLine("Введено не корректное значение");
-            
-        }
-
-
 
     }
 }

@@ -9,7 +9,9 @@ public abstract class Repository<T>
         Data = new List<T>();
     }
 
-    public abstract List<T> GetData();
+    public virtual List<T> GetData()
+        => Data;
     
-    public abstract void AddElement(T element);
+    public virtual void AddElement(T element)
+        => Data.Add(element);
 }

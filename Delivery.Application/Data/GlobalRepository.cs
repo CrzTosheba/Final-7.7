@@ -1,4 +1,5 @@
 using Delivery.Application.Models;
+using Delivery.Application.Models.Delivery;
 
 namespace Delivery.Application.Data;
 
@@ -6,6 +7,8 @@ public static class GlobalRepository
 {
     public static BookRepository BookRepository { get; set; }
     public static FoodRepository FoodRepository { get; set; }
+
+    public static DeliveryRepo DeliveryRepository { get; set; }
 
     static GlobalRepository()
     {
@@ -19,6 +22,13 @@ public static class GlobalRepository
         FoodRepository.AddElement(new Food("Банан, вес грамм:", 123));
         FoodRepository.AddElement(new Food("Говядина, вес грамм:", 323));
         FoodRepository.AddElement(new Food("Молоко, вес грамм:", 243));
+
+        DeliveryRepository = new DeliveryRepo();
+        DeliveryRepository.AddElement(new PickPointDelivery("Одинцово 1"));
+        DeliveryRepository.AddElement(new PickPointDelivery("Одинцово 2"));
+        DeliveryRepository.AddElement(new ShopDelivery("Магаз 1"));
+        DeliveryRepository.AddElement(new ShopDelivery("Магаз 2"));
+        DeliveryRepository.AddElement(new HomeDelivery());
 
 
 
