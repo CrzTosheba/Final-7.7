@@ -7,7 +7,7 @@ using Delivery.Application.Models.Delivery;
 using System.Collections.Generic;
 
 var products = new List<Product>();
-Delivery.Application.Models.Abstarct.Delivery delivery;
+Delivery.Application.Models.Abstarct.Delivery delivery; //dasd
 
 CreateBasket();
 Console.WriteLine("Корзина наполнена");
